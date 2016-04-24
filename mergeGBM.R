@@ -1,10 +1,10 @@
 #######
 rm(list = ls())
-setwd("D:/zqs/experiment_result/RAW_data/GBM/6811115b-c3db-4f12-8689-c4deef8252fd/Expression-Genes/UNC__AgilentG4502A_07_2")                                     #Éè¶¨¹¤×÷Ä¿Â¼ÎªDÅÌ
-a = list.files("Level_3")                          #list.filesÃüÁî½«inputÎÄ¼ş¼ĞÏÂËùÓĞÎÄ¼şÃûÊäÈëa
-dir = paste("./Level_3/",a,sep="")                   #ÓÃpasteÃüÁî¹¹½¨Â·¾¶±äÁ¿dir
-n = length(dir)                                                                 #¶ÁÈ¡dir³¤¶È£¬Ò²¾ÍÊÇÎÄ¼ş¼ĞÏÂµÄÎÄ¼ş¸öÊı
-## merge.data = read.csv(file = dir[1],header=T,sep=",")   #¶ÁÈëµÚÒ»¸öÎÄ¼şÄÚÈİ£¨¿ÉÒÔ²»ÓÃÏÈ¶ÁÒ»¸ö£¬µ«ÊÇÎªÁË¼òµ¥£¬Ê¡È¥¶¨Òådata.frameµÄÊ±¼ä£¬ÎÒÑ¡ÔñÏÈ¶ÁÈëÒ»¸öÎÄ¼ş¡£
+setwd("D:/zqs/experiment_result/RAW_data/GBM/6811115b-c3db-4f12-8689-c4deef8252fd/Expression-Genes/UNC__AgilentG4502A_07_2")                                     #è®¾å®šå·¥ä½œç›®å½•ä¸ºDç›˜
+a = list.files("Level_3")                          #list.fileså‘½ä»¤å°†inputæ–‡ä»¶å¤¹ä¸‹æ‰€æœ‰æ–‡ä»¶åè¾“å…¥a
+dir = paste("./Level_3/",a,sep="")                   #ç”¨pasteå‘½ä»¤æ„å»ºè·¯å¾„å˜é‡dir
+n = length(dir)                                                                 #è¯»å–diré•¿åº¦ï¼Œä¹Ÿå°±æ˜¯æ–‡ä»¶å¤¹ä¸‹çš„æ–‡ä»¶ä¸ªæ•°
+## merge.data = read.csv(file = dir[1],header=T,sep=",")   #è¯»å…¥ç¬¬ä¸€ä¸ªæ–‡ä»¶å†…å®¹ï¼ˆå¯ä»¥ä¸ç”¨å…ˆè¯»ä¸€ä¸ªï¼Œä½†æ˜¯ä¸ºäº†ç®€å•ï¼Œçœå»å®šä¹‰data.frameçš„æ—¶é—´ï¼Œæˆ‘é€‰æ‹©å…ˆè¯»å…¥ä¸€ä¸ªæ–‡ä»¶ã€‚
 merge.data = read.delim(file = dir[1],header=T,sep="\t")
 for (i in 2:n)
 {
@@ -12,3 +12,5 @@ for (i in 2:n)
   merge.data = merge(merge.data,new.data,sort = FALSE)
 }
 write.table(merge.data,"MergeData.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+#########
+######
