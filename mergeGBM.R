@@ -1,3 +1,4 @@
+#######
 rm(list = ls())
 setwd("D:/zqs/experiment_result/RAW_data/GBM/6811115b-c3db-4f12-8689-c4deef8252fd/Expression-Genes/UNC__AgilentG4502A_07_2")                                     #设定工作目录为D盘
 a = list.files("Level_3")                          #list.files命令将input文件夹下所有文件名输入a
